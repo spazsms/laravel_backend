@@ -24,6 +24,11 @@ class CaourselItemsController extends Controller
         //
     }
 
+    public function testarg(Request $request)
+    {
+        return $request->name;
+    }
+
     /**
      * Store a newly created resource in storage.
      */
@@ -35,9 +40,11 @@ class CaourselItemsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(String $id)
     {
-        //
+        return $id;
+        // return CarouselItems::find($id);
+
     }
 
     /**
@@ -45,8 +52,9 @@ class CaourselItemsController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        
     }
+
 
     /**
      * Update the specified resource in storage.
